@@ -1,0 +1,92 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.title{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+.heart {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+  
+    position: absolute;
+    left: 45%; top: 45%;
+  
+    background-color: red;
+  
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+  
+    position: absolute;
+    height: 50px;
+    width: 50px;
+  
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .heart:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 25px;
+    top: 0;
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale( 1 );
+    }
+    20% {
+      transform: scale( 1.25 )
+        translateX(5%)
+        translateY(5%);
+    }
+    40% {
+      transform: scale( 1.5 )
+        translateX(9%)
+        translateY(10%);
+    }
+   }
+   .container{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+   }
+   .list{
+       list-style: none;
+   }
+   .items::before,.items::after{
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+   }
+   .items::before{
+    margin-right: 16px;
+    background-image: url("../images/heart.webp");
+   }
+   .image{
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       left: 30%;
+   }
+   .viewport{
+       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/masha.jpg);
+   }
